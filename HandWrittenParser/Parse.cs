@@ -94,7 +94,7 @@ namespace HandWrittenParser
 			return parser.Then(t => Return(convert(t)));
 		}
 
-		// like LINQ SelectMany 
+		// like LINQ's SelectMany
 		public static Parser<V> SelectMany<T, U, V>(
 			this Parser<T> parser,
 			Func<T, Parser<U>> selector,

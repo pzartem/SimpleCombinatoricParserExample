@@ -6,17 +6,17 @@ namespace HandWrittenParser
 {
 	public static class CalcParserExample
 	{
-		private static readonly Parser<int> NumberToken =
-			from number in Parse.Number.Token()
-			select int.Parse(number);
-
 		private static readonly Parser<ConstantExpression> Constant =
-			from number in NumberToken
-			select Expression.Constant(number);
+			from number in Parse.Number.Token()
+			select Expression.Constant(int.Parse(number));
+
+		private static readonly Parser<char> AddOperator =
+			from addOperator in Parse.Char('+').Token()
+			select addOperator;
 
 		public static readonly Parser<BinaryExpression> SumExpression =
 			from lop in Constant
-			from plusOperator in Parse.Char('+').Token()
+			from plusOperator in AddOperator
 			from rop in Constant
 			select Expression.Add(lop, rop);
 
