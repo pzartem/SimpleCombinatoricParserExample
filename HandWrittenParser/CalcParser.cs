@@ -16,7 +16,7 @@ namespace HandWrittenParser
 
 		public static readonly Parser<BinaryExpression> SumExpression =
 			from lop in Constant
-			from plusOperator in Parse.IsChar('+').Token()
+			from plusOperator in Parse.Char('+').Token()
 			from rop in Constant
 			select Expression.Add(lop, rop);
 

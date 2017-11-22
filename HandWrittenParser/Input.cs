@@ -14,7 +14,7 @@
 			Position = 0;
 		}
 
-		private Input(string source, int position)
+		public Input(string source, int position)
 		{
 			Source = source;
 			Position = position;
