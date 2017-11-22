@@ -1,2 +1,2 @@
 # SimpleCombinatoricParserExample
-Build simple combinatoric parser, to explain how it work.
+Built simple combinatoric parser, to explain how it works.
