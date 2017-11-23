@@ -20,9 +20,6 @@
 			Position = position;
 		}
 
-		public Input GetNext()
-		{
-			return new Input(Source, Position + 1);
-		}
+		public Input GetRemainder() => new Input(Source, Position + 1);
 	}
 }

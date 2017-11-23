@@ -9,7 +9,7 @@ namespace HandWrittenParser
 	/// </summary>
 	public static class Parse
 	{
-		// predicate current == "a"
+		// predicate: current == "a"
 		// input: "abc" -> result (success, value: "a", remainder: "bc")
 		public static Parser<char> Char(Func<char, bool> predicate, string description)
 		{
@@ -18,14 +18,14 @@ namespace HandWrittenParser
 				if (!i.AtEnd)
 				{
 					return predicate(i.Current) 
-						? Result<char>.Success(i.Current, i.GetNext()) 
+						? Result<char>.Success(i.Current, i.GetRemainder()) 
 						: Result<char>.Failure($"unexpected {i.Current}, expected: {description}");
 				}
 
 				return Result<char>.Failure("Unexpected end of string");
 			};
 		}
-		// target = a
+		// target: 'a'
 		// input: "abc" -> result (success, value: "a", remainder: "bc")
 		public static Parser<char> Char(char target)
 		{
@@ -45,7 +45,7 @@ namespace HandWrittenParser
 			return characters.Select(chs => new string(chs.ToArray()));
 		}
 
-		// input parser Parse Numbers
+		// input parser: Parser<int>
 		// input: " 123 + 12" -> result (success, value: "123", remainder: "+ 12")
 		public static Parser<T> Token<T>(this Parser<T> parser)
 		{
@@ -55,7 +55,7 @@ namespace HandWrittenParser
 				   select item;
 		}
 
-		// parses while parser<T> is successoful
+		// parses while parser<T> is successful
 		public static Parser<IEnumerable<T>> Many<T>(this Parser<T> parser)
 		{
 			return i =>

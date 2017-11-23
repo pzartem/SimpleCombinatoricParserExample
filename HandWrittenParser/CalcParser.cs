@@ -3,7 +3,7 @@ using System;
 using System.Linq.Expressions;
 
 namespace HandWrittenParser
-{
+{	
 	public static class CalcParserExample
 	{
 		private static readonly Parser<ConstantExpression> Constant =

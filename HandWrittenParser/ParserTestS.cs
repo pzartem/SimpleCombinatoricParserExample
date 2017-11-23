@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace HandWrittenParser
 {
 	[TestFixture]
-	internal class ParserTest
+	internal class ParserTests
 	{
 		[Test]
 		public void CalculatorTest()

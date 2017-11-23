@@ -5,7 +5,7 @@
 		public T Value { get; }
 		public bool WasSuccessful { get; }
 		public string Message { get; }
-		public Input Remainder { get; set; }
+		public Input Remainder { get; }
 
 		public Result(string errorMessage)
 		{
@@ -24,14 +24,9 @@
 			Remainder = remainder;
 		}
 
-		public static Result<T> Success(T inputCurrent, Input getNext)
-		{
-			return new Result<T>(inputCurrent, getNext, true, string.Empty);
-		}
+		public static Result<T> Success(T inputCurrent, Input remainder)
+			=> new Result<T>(inputCurrent, remainder, true, string.Empty);
 
-		public static Result<T> Failure(string errrorMessage)
-		{
-			return new Result<T>(errrorMessage);
-		}
+		public static Result<T> Failure(string errrorMessage) => new Result<T>(errrorMessage);
 	}
 }
