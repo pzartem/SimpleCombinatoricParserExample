@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandWrittenParser", "HandWrittenParser\HandWrittenParser.csproj", "{A4826CFB-F65E-43EE-8CD5-301E4DC87738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpracheCalc", "SpracheCalc\SpracheCalc.csproj", "{B08EF6CC-1E00-495A-98DA-DAA43C1F3B9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A4826CFB-F65E-43EE-8CD5-301E4DC87738}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4826CFB-F65E-43EE-8CD5-301E4DC87738}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4826CFB-F65E-43EE-8CD5-301E4DC87738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B08EF6CC-1E00-495A-98DA-DAA43C1F3B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B08EF6CC-1E00-495A-98DA-DAA43C1F3B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B08EF6CC-1E00-495A-98DA-DAA43C1F3B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B08EF6CC-1E00-495A-98DA-DAA43C1F3B9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

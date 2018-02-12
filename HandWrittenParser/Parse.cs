@@ -9,7 +9,7 @@ namespace HandWrittenParser
 	/// </summary>
 	public static class Parse
 	{
-		// predicate: current == "a"
+		// predicate: (current == "a")
 		// input: "abc" -> result (success, value: "a", remainder: "bc")
 		public static Parser<char> Char(Func<char, bool> predicate, string description)
 		{

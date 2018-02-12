@@ -14,9 +14,9 @@ namespace HandWrittenParser
 			from addOperator in Parse.Char('+').Token()
 			select addOperator;
 
-		public static readonly Parser<BinaryExpression> SumExpression =
+		private static readonly Parser<BinaryExpression> SumExpression =
 			from lop in Constant
-			from plusOperator in AddOperator
+			from addOperator in AddOperator
 			from rop in Constant
 			select Expression.Add(lop, rop);
 
